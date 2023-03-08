@@ -103,21 +103,21 @@ void checkModeChange(){
   else {buttonSelectBefore = 0;buttonStartBefore = 0;}
 }
 void setupPins(){
-    joystickUP.attach(0,INPUT_PULLUP);
-    joystickDOWN.attach(1,INPUT_PULLUP);
-    joystickLEFT.attach(2,INPUT_PULLUP);
-    joystickRIGHT.attach(3,INPUT_PULLUP);
-    buttonA.attach(5,INPUT_PULLUP);
+    joystickUP.attach(19,INPUT_PULLUP);
+    joystickDOWN.attach(10,INPUT_PULLUP);
+    joystickLEFT.attach(16,INPUT_PULLUP);
+    joystickRIGHT.attach(15,INPUT_PULLUP);
+    buttonA.attach(3,INPUT_PULLUP);
     buttonB.attach(4,INPUT_PULLUP);;
-    buttonX.attach(7,INPUT_PULLUP);
+    buttonX.attach(0,INPUT_PULLUP);
     buttonY.attach(6,INPUT_PULLUP);
-    buttonLB.attach(9,INPUT_PULLUP);
-    buttonRB.attach(8,INPUT_PULLUP);
-    buttonLT.attach(14,INPUT_PULLUP);
-    buttonRT.attach(10,INPUT_PULLUP);
-    buttonSTART.attach(15,INPUT_PULLUP);
-    buttonSELECT.attach(16,INPUT_PULLUP);
-    buttonHOME.attach(18,INPUT_PULLUP);
+    buttonLB.attach(12,INPUT_PULLUP);
+    buttonRB.attach(11,INPUT_PULLUP);
+    buttonLT.attach(8,INPUT_PULLUP);
+    buttonRT.attach(9,INPUT_PULLUP);
+    buttonSTART.attach(18,INPUT_PULLUP);
+    buttonSELECT.attach(14,INPUT_PULLUP);
+    buttonHOME.attach(0,INPUT_PULLUP);
 
     joystickUP.interval(MILLIDEBOUNCE);
     joystickDOWN.interval(MILLIDEBOUNCE);

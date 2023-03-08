@@ -103,20 +103,16 @@ void checkModeChange(){
   else {buttonSelectBefore = 0;buttonStartBefore = 0;}
 }
 void setupPins(){
-    joystickUP.attach(19,INPUT_PULLUP);
+    joystickUP.attach(14,INPUT_PULLUP);
     joystickDOWN.attach(10,INPUT_PULLUP);
     joystickLEFT.attach(16,INPUT_PULLUP);
     joystickRIGHT.attach(15,INPUT_PULLUP);
     buttonA.attach(3,INPUT_PULLUP);
     buttonB.attach(4,INPUT_PULLUP);;
-    buttonX.attach(0,INPUT_PULLUP);
+    buttonX.attach(2,INPUT_PULLUP);
     buttonY.attach(6,INPUT_PULLUP);
-    buttonLB.attach(12,INPUT_PULLUP);
-    buttonRB.attach(11,INPUT_PULLUP);
-    buttonLT.attach(8,INPUT_PULLUP);
-    buttonRT.attach(9,INPUT_PULLUP);
-    buttonSTART.attach(18,INPUT_PULLUP);
-    buttonSELECT.attach(14,INPUT_PULLUP);
+    buttonLB.attach(5,INPUT_PULLUP);
+    buttonSTART.attach(7,INPUT_PULLUP);
     buttonHOME.attach(0,INPUT_PULLUP);
 
     joystickUP.interval(MILLIDEBOUNCE);
@@ -128,11 +124,7 @@ void setupPins(){
     buttonX.interval(MILLIDEBOUNCE);
     buttonY.interval(MILLIDEBOUNCE);
     buttonLB.interval(MILLIDEBOUNCE);
-    buttonRB.interval(MILLIDEBOUNCE);
-    buttonLT.interval(MILLIDEBOUNCE);
-    buttonRT.interval(MILLIDEBOUNCE);
     buttonSTART.interval(MILLIDEBOUNCE);
-    buttonSELECT.interval(MILLIDEBOUNCE);
     buttonHOME.interval(MILLIDEBOUNCE);
     
     pinMode(pinOBLED, OUTPUT);  
@@ -168,11 +160,7 @@ void buttonRead()
   if (buttonX.update()) {buttonStatus[BUTTONX] = buttonX.fell();}
   if (buttonY.update()) {buttonStatus[BUTTONY] = buttonY.fell();}
   if (buttonLB.update()) {buttonStatus[BUTTONLB] = buttonLB.fell();}
-  if (buttonRB.update()) {buttonStatus[BUTTONRB] = buttonRB.fell();}
-  if (buttonLT.update()) {buttonStatus[BUTTONLT] = buttonLT.fell();}
-  if (buttonRT.update()) {buttonStatus[BUTTONRT] = buttonRT.fell();}
   if (buttonSTART.update()) {buttonStatus[BUTTONSTART] = buttonSTART.fell();}
-  if (buttonSELECT.update()) {buttonStatus[BUTTONSELECT] = buttonSELECT.fell();}
   if (buttonHOME.update()) {buttonStatus[BUTTONHOME] = buttonHOME.fell();}
 }
 
